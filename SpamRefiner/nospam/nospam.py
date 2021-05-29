@@ -22,7 +22,7 @@ from telethon.tl.types import (PeerChannel, ChannelParticipantsAdmins,
                                ChannelParticipantsBots, User, UserFull)
 from telethon.tl.types import ChannelParticipantsBanned, ChannelParticipantCreator, ChannelParticipantsKicked
 from pymongo import MongoClient
-from SpamKiller import MONGO_DB_URI
+from SpamRefiner import MONGO_DB_URI
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
 db = client["spamkiller"]
