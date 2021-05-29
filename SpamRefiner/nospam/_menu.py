@@ -1,6 +1,6 @@
 from SpamRefiner import spam
 
-PM_START_TEXT = """Hi I'm a SpamRefiner Bot Built in Python Using Telethon For More Use /help
+PM_START_TEXT = """Hi I'm a SpamRefiner Bot Built in Python Using Telethon For More Use /help"""
 @register(pattern="^/start$")
 async def start(event):
     if not event.is_group:
