@@ -1,5 +1,4 @@
-telethon
-sqlalchemy==1.3.20
+telethon==1.16.4
 pymongo==3.11.0
 better_profanity==0.7.0
 
