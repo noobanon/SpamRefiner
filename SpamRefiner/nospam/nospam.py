@@ -4,7 +4,8 @@ from asyncio import sleep, wait
 import asyncio
 import better_profanity
 from better_profanity import profanity
-
+from SpamRefiner.events import register
+from SpamRefiner import spam
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.errors import (BadRequestError, ChatAdminRequiredError,
                              ImageProcessFailedError, PhotoCropSizeSmallError,
