@@ -28,6 +28,7 @@ client = MongoClient(MONGO_DB_URI)
 db = client["spamkiller"]
 spammers = db.spammer
 
+CMD_STARTERS = "/"
 #================Module==========
 
 async def can_change_info(message):
