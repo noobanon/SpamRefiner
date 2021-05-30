@@ -25,7 +25,7 @@ if ENV:
     
     API_KEY = os.environ.get("API_KEY", None)
     API_HASH = os.environ.get("API_HASH", None)
-    
+    CONSOLE_LOGGER_VERBOSE = os.environ.get("CONSOLE_LOGGER_VERBOSE", "False")
     DB_URI = os.environ.get("DATABASE_URL")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     SUDO_USERS = list(SUDO_USERS)
