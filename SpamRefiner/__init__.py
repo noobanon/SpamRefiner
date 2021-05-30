@@ -43,7 +43,7 @@ if ENV:
         )
     LOGS = getLogger(__name__)
             
-api_id = API_ID
+api_id = API_KEY
 api_hash = API_HASH
-spam = TelegramClient("SpamRefiner", API_ID, API_HASH)
+spam = TelegramClient("SpamRefiner", API_KEY, API_HASH)
     
