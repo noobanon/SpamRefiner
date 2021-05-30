@@ -1,6 +1,6 @@
 from sys import argv, exit
 from SpamRefiner import spam
-from SpamRefiner import TOKEN
+from SpamRefiner import TOKEN, LOGGER
 
 import SpamRefiner.events
 
