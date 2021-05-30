@@ -10,7 +10,7 @@ async def start(event):
             buttons=[
                 [
                     Button.url(
-                        "Add To Group  👥", "t.me/Spamkiller?startgroup=true"
+                        "Add To Group  👥", "t.me/@SpamRefineRobot?startgroup=true"
                     ),
                     
                 ],
