@@ -6,6 +6,7 @@ import SpamRefiner.events
 
 try:
     spam.start(bot_token=TOKEN)
+    LOGGER.info("Bot is alive")
 except Exception:
     print("Your Bot Token Isn't Invalid")
     exit(1)
