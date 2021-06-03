@@ -23,7 +23,7 @@ async def start(event):
   else:
     await event.reply("Hey I'm Alive")
 
-HELP_TEXT = """Hi"""
+HELP_TEXT = """Hi I'm Spam Refiner Bot Built in Python"""
 
 @register(pattern="^/help$")
 async def help(event):
@@ -34,3 +34,4 @@ async def help(event):
       "Contact me in PM to get the help menu",
       buttons=[[Button.url("Help ", "t.me/SpamKiller?start=help")]],
       )
+
