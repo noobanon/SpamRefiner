@@ -13,7 +13,7 @@ def register(**args):
     args['pattern'] = pattern.replace('^/', r_pattern, 1)
 
     def decorator(func):
-        client.add_event_handler(func, events.NewMessage(**args))
+        spam.add_event_handler(func, events.NewMessage(**args))
         return func
 
     return decorator
