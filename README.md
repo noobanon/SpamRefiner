@@ -14,8 +14,8 @@
 <a href="https://t.me/TheBotSupports"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
 # SpamRefiner 2.0
-> A proactive Spam Filter and Blocker for group chats
+``` A proactive Spam Filter and Blocker for group chats```
 
-<br> ![SpamRefiner](https://github.com/noobanon/SpamRefiner/blob/main/SpamRefiner/nospam/helpers/SpamRefiner.gif)
+ ![SpamRefiner](https://github.com/noobanon/SpamRefiner/blob/main/SpamRefiner/nospam/helpers/SpamRefiner.gif)
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
