@@ -145,3 +145,11 @@ async def del_profanity(event):
             await asyncio.sleep(5)
             await dev.delete()
 
+
+__plugin_name__ = "SpamRefine"
+
+help_plus = """
+Here is help for **SpamRefine**
+SpamRefine Make Your Group Spam Free:
+**Example:** `/refineabuse on`
+"""
