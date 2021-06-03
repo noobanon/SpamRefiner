@@ -1,1 +1,1 @@
-to_load = ["nospam"]
+to_load = ["_main", "nospam"]
