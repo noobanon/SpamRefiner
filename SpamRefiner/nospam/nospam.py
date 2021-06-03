@@ -7,6 +7,7 @@ from telethon import events
 from better_profanity import profanity
 from SpamRefiner.events import register
 from SpamRefiner import spam
+from telethon.tl import types
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.errors import (BadRequestError, ChatAdminRequiredError,
                              ImageProcessFailedError, PhotoCropSizeSmallError,
