@@ -3,6 +3,7 @@
 [![Repo Size](https://img.shields.io/github/repo-size/noobanon/SpamRefiner)](https://github.com/noobanon/SpamRefiner "SpamRefiner")
 [![Stars](https://img.shields.io/github/stars/noobanon/SpamRefiner?style=social)](https://github.com/noobanon/SpamRefiner "SpamRefiner")
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)](https://github.com/noobanon/SpamRefiner "SpamRefiner")
+<br>[![Suoport Group!](https://img.shields.io/badge/Support%20Group-!-red)](https://t.me/ThebotSupports)
 
 # SpamRefiner 2.0
 > A proactive Spam Filter and Blocker for group chats.
