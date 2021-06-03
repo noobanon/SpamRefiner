@@ -67,49 +67,51 @@ profanity.load_censor_words_from_file("./abuse_wordlist.txt")
 
 @spam.on(events.NewMessage(pattern="^[!/]refineabuse$"))
 async def profanity(event):
-    if event.fwd_from:
-        return
-    if event.is_private:
-        return
-    if MONGO_DB_URI is None:
-        return
-    if not await can_change_info(message=event):
-        await event.reply("**You Don't have permission to use this**")
-        return 
-    input = event.pattern_match.group(1)
-    chats = spammers.find({})
-    if not input:
-        for c in chats:
-            if event.chat_id == c["id"]:
-                await event.reply(
-                    "Please provide some input yes or no.\n\nCurrent setting is : **on**"
-                )
-                return
+  if event.fwd_from:
+    return
+  if event.is_private:
+    return
+  if MONGO_DB_URI is None:
+    return
+  if not await can_change_info(message=event):
+    await event.reply("**You Don't have permission to use this**")
+    return 
+  input = event.pattern_match.group(1)
+  chats = spammers.find({})
+  if not input:
+    for c in chats:
+      if event.chat_id == c["id"]:
         await event.reply(
-            "Please provide some input yes or no.\n\nCurrent setting is : **off**"
-        )
+          "Please provide some input yes or no.\n\nCurrent setting is : **on**"
+          )
         return
+      await event.reply(
+        "Please provide some input yes or no.\n\nCurrent setting is : **off**"
+        )
+      return
     if input == "on":
-        if event.is_group:
-            chats = spammers.find({})
-            for c in chats:
-                if event.chat_id == c["id"]:
-                    await event.reply(
-                        "AbuseRefiner filter is already activated for this chat."
-                    )
-                    return
-            spammers.insert_one({"id": event.chat_id})
-            await event.reply("AbuseRefiner filter turned on for this chat.")
+      if event.is_group:
+        chats = spammers.find({})
+        for c in chats:
+          if event.chat_id == c["id"]:
+            await event.reply(
+              "AbuseRefiner filter is already activated for this chat."
+              )
+            return
+          spammers.insert_one({"id": event.chat_id})
+          await event.reply("AbuseRefiner filter turned on for this chat.")
+          
     if input == "off":
-        if event.is_group:
-            chats = spammers.find({})
-            for c in chats:
-                if event.chat_id == c["id"]:
-                    spammers.delete_one({"id": event.chat_id})
-                    await event.reply("AbuseRefiner filter turned off for this chat.")
-                    return
+      if event.is_group:
+        chats = spammers.find({})
+        for c in chats:
+          if event.chat_id == c["id"]:
+            spammers.delete_one({"id": event.chat_id})
+            await event.reply("AbuseRefiner filter turned off for this chat.")
+            return
         await event.reply("AbuseRefiner filter isn't turned on for this chat.")
-    if not input == "on" and not input == "off":
+     
+     if not input == "on" and not input == "off":
         await event.reply("I only understand by on or off")
         return
 
