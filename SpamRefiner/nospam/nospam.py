@@ -79,7 +79,7 @@ async def is_register_admin(chat, user):
     return None
 
 #import abuse file
-profanity.load_censor_words_from_file("./abuse_wordlist.txt")
+
 
 @register(pattern="^/refineabuse(?: |$)(.*)")
 async def profanity(event):
@@ -87,11 +87,11 @@ async def profanity(event):
     return
   if event.is_private:
     return
-  if MONGO_DB_URL is None:
-    return
-  if not await can_change_info(message=event):
-    await event.reply("**You Don't have permission to use this**")
-    return 
+  #if MONGO_DB_URL is None:
+    #return
+  #if not await can_change_info(message=event):
+    #await event.reply("**You Don't have permission to use this**")
+    #return 
   input = event.pattern_match.group(1)
   chats = spammers.find({})
   if not input:
@@ -130,7 +130,7 @@ async def profanity(event):
             await event.reply("I only understand by on or off")
             return
         
-
+profanity.load_censor_words_from_file("./abuse_wordlist.txt")
 @spam.on(events.NewMessage(pattern=None))
 async def del_profanity(event):
   if event.is_private:
