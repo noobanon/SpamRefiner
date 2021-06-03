@@ -32,7 +32,7 @@ if ENV:
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     SUDO_USERS = list(SUDO_USERS)
     
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
+    MONGO_DB_URL = os.environ.get("MONGO_DB_URI", None)
     TEMPORARY_DATA = os.environ.get("TEMPORARY_DATA", None)
         
     if CONSOLE_LOGGER_VERBOSE:
