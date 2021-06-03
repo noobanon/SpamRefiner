@@ -34,7 +34,7 @@ CMD_STARTERS = "/"
 #================Module==========
 
 async def can_change_info(message):
-    result = await bot(
+    result = await spam(
         functions.channels.GetParticipantRequest(
             channel=message.chat_id,
             user_id=message.sender_id,
@@ -55,9 +55,9 @@ async def is_register_admin(chat, user):
         )
     if isinstance(chat, types.InputPeerChat):
 
-        ui = await bot.get_peer_id(user)
+        ui = await spam.get_peer_id(user)
         ps = (
-            await bot(functions.messages.GetFullChatRequest(chat.chat_id))
+            await spam(functions.messages.GetFullChatRequest(chat.chat_id))
         ).full_chat.participants.participants
         return isinstance(
             next((p for p in ps if p.user_id == ui), None),
