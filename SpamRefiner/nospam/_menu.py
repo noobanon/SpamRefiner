@@ -6,7 +6,7 @@ from telethon.tl import functions
 
 PM_START_TEXT = """Hi I'm a SpamRefiner Bot Built in Python Using Telethon For More Use /help"""
 
-@spam.on(events.NewMessage(pattern="^[!/]start$")
+@register(pattern="^/start$")
 async def start(event):
   if not event.is_group:
     await spam.send_message(
@@ -25,7 +25,7 @@ async def start(event):
 
 HELP_TEXT = """Hi"""
 
-@spam.on(events.NewMessage(pattern="^[!/]help$")
+@register(pattern="^/help$")
 async def help(event):
   if not event.is_group:    
     await event.reply(HELP_TEXT)
