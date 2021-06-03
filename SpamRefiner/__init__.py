@@ -3,6 +3,7 @@ import os
 import sys
 import time
 import os
+from motor import motor_asyncio
 import urllib.parse as urlparse
 import json
 from logging import basicConfig
@@ -43,6 +44,9 @@ if ENV:
             format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=INFO
         )
     LOGS = getLogger(__name__)
+
+MONGO_CLIENT = motor_asyncio.AsyncIOMotorClient(MONGO_DB_URL)
+
             
 api_id = API_KEY
 api_hash = API_HASH
