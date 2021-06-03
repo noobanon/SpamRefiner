@@ -29,7 +29,7 @@ HELP_TEXT = """Hi I'm Spam Refiner Bot Built in Python:\n
 Example: `/refineabuse` Get Current Chat Status
 `/refineabuse on` Turn on abuse protection """
 
-@register(pattern="^/help$")
+@register(pattern="^/help")
 async def help(event):
   if not event.is_group:    
     await event.reply(HELP_TEXT)
