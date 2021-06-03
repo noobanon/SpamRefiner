@@ -51,7 +51,7 @@ db = MONGO_CLIENT.spamrefiner
 print("INITIALIZING ....")
 api_id = API_KEY
 api_hash = API_HASH
-pbot = Client("spamrefiner", , api_id, api_hash, bot_token=TOKEN)
+pbot = Client("SpamPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 spam = TelegramClient("SpamRefiner", api_id, api_hash)
 spam.start(bot_token=TOKEN)    
 pbot.start()
