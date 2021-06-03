@@ -49,7 +49,7 @@ async def is_register_admin(chat, user):
 
         return isinstance(
             (
-                await bot(functions.channels.GetParticipantRequest(chat, user))
+                await spam(functions.channels.GetParticipantRequest(chat, user))
             ).participant,
             (types.ChannelParticipantAdmin, types.ChannelParticipantCreator),
         )
