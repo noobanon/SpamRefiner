@@ -8,3 +8,5 @@
 > A proactive Spam Filter and Blocker for group chats.
 
 ![SpamRefiner](https://github.com/noobanon/SpamRefiner/blob/main/SpamRefiner/nospam/helpers/SpamRefiner.gif)
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
