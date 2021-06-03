@@ -1,9 +1,14 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/441b48966e9f4b58a643d7c4cee8ba66)](https://app.codacy.com/gh/noobanon/SpamRefiner?utm_source=github.com&utm_medium=referral&utm_content=noobanon/SpamRefiner&utm_campaign=Badge_Grade_Dashboard)
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Repo Size](https://img.shields.io/github/repo-size/noobanon/SpamRefiner)](https://github.com/noobanon/SpamRefiner "SpamRefiner")
-[![Stars](https://img.shields.io/github/stars/noobanon/SpamRefiner?style=social)](https://github.com/noobanon/SpamRefiner "SpamRefiner")
-[![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)](https://github.com/noobanon/SpamRefiner "SpamRefiner")
-<br>[![Suoport Group!](https://img.shields.io/badge/Support%20Group-!-red)](https://t.me/ThebotSupports)
+<p align="center">
+    <a href="https://app.codacy.com/manual/noonanon/SpamRefiner/dashboard"> <img src="https://img.shields.io/codacy/grade/4d58f2a402b54aed8a7d95f7add45a81?color=brightgreen&logo=codacy&logoColor=green&style=for-the-badge" alt="Codacy" /></a>
+    <a href="https://github.com/noobanon/SpamRefiner"> <img src="https://img.shields.io/github/languages/code-size/noobanon/SpamRefiner?color=purple&style=for-the-badge" /></a>
+    <a href="https://github.com/noobanon/SpamRefiner/commits/noobanon"> <img src="https://img.shields.io/github/last-commit/noobanon/SpamRefiner?color=red&style=for-the-badge" /></a>
+    <a href="https://github.com/noonanon/SpamRefiner/issues"> <img src="https://img.shields.io/github/issues/noobanon/SpamRefiner?color=yellow&style=for-the-badge" /></a>
+    <a href="https://github.com/noobanon/SpamRefiner/network/members"> <img src="https://img.shields.io/github/forks/noobanon/Spamrefiner?color=green&style=for-the-badge" /></a>  
+    <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=yellow&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
+    
+    [![License: AGPL v3](https://img.shields.io/github/license/noobanon/spamrefiner?style=for-the-badge)](https://www.gnu.org/licenses/agpl-3.0)
+    [![Suoport Group!](https://img.shields.io/badge/Support%20Group-!-red)](https://t.me/ThebotSupports)
+</p>
 
 # SpamRefiner 2.0
 > A proactive Spam Filter and Blocker for group chats.
