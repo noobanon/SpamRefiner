@@ -35,9 +35,9 @@ from telethon.tl.types import (PeerChannel, ChannelParticipantsAdmins,
 from telethon.tl.types import ChannelParticipantsBanned, ChannelParticipantCreator, ChannelParticipantsKicked
 
 from pymongo import MongoClient
-from SpamRefiner import MONGO_DB_URI
+from SpamRefiner import MONGO_DB_URL
 client = MongoClient()
-client = MongoClient(MONGO_DB_URI)
+client = MongoClient(MONGO_DB_URL)
 db = client["spamrefiner"]
 spammers = db.spammer
 
