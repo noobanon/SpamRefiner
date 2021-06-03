@@ -86,11 +86,11 @@ async def profanity(event):
     return
   if event.is_private:
     return
-  #if MONGO_DB_URL is None:
+  if MONGO_DB_URL is None:
     #return
-  #if not await can_change_info(message=event):
-    #await event.reply("**You Don't have permission to use this**")
-    #return 
+  if not await can_change_info(message=event):
+    await event.reply("**You Don't have permission to use this**")
+    return 
   input = event.pattern_match.group(1)
   chats = spammers.find({})
   if not input:
