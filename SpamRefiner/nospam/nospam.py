@@ -81,7 +81,7 @@ async def is_register_admin(chat, user):
 #import abuse file
 profanity.load_censor_words_from_file("./abuse_wordlist.txt")
 
-@register(pattern="^/refineabuse ?(.*)")
+@register(pattern="^/refineabuse(?: |$)(.*)")
 async def profanity(event):
   if event.fwd_from:
     return
