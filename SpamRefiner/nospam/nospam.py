@@ -3,11 +3,10 @@ from time import sleep
 from asyncio import sleep, wait
 import asyncio
 import better_profanity
-from telethon import events
 from better_profanity import profanity
 from SpamRefiner.events import register
 from SpamRefiner import spam
-from telethon import functions, types
+from telethon import functions, types, events
 from telethon.tl import types
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import pack_bot_file_id
