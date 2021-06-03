@@ -111,10 +111,10 @@ async def profanity(event):
             await event.reply("AbuseRefiner filter turned off for this chat.")
             return
         await event.reply("AbuseRefiner filter isn't turned on for this chat.")
-     
-     if not input == "on" and not input == "off":
-        await event.reply("I only understand by on or off")
-        return
+        if not input == "on" and not input == "off":
+            await event.reply("I only understand by on or off")
+            return
+        
 
 @spam.on(events.NewMessage(pattern=None))
 async def del_profanity(event):
