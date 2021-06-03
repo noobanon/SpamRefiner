@@ -1,5 +1,8 @@
 from SpamRefiner import spam
-from telethon import events
+from telethon import custom, events, Button
+from telethon import types
+from telethon.tl import functions
+
 
 PM_START_TEXT = """Hi I'm a SpamRefiner Bot Built in Python Using Telethon For More Use /help"""
 
