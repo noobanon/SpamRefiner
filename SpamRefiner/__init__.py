@@ -9,7 +9,8 @@ from logging import basicConfig
 from logging import DEBUG
 from logging import getLogger
 from logging import INFO
-from telethon import TelegramClient
+from telethon import TelegramClient, events, sync
+
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
@@ -45,5 +46,5 @@ if ENV:
             
 api_id = API_KEY
 api_hash = API_HASH
-spam = TelegramClient("SpamRefiner", API_KEY, API_HASH)
+spam = TelegramClient("SpamRefiner", api_id, api_hash)
     
