@@ -100,34 +100,30 @@ async def profanity(event):
           "Please provide some input yes or no.\n\nCurrent setting is : **on**"
           )
         return
-      await event.reply(
+    await event.reply(
         "Please provide some input yes or no.\n\nCurrent setting is : **off**"
         )
       return
-    if input == "on":
+  elif input == "on":
       if event.is_group:
-        chats = spammers.find({})
         for c in chats:
           if event.chat_id == c["id"]:
             await event.reply(
               "AbuseRefiner filter is already activated for this chat."
               )
             return
-          spammers.insert_one({"id": event.chat_id})
-          await event.reply("AbuseRefiner filter turned on for this chat.")
+        spammers.insert_one({"id": event.chat_id})
+        await event.reply("AbuseRefiner filter turned on for this chat.")
           
-    if input == "off":
+  elif input == "off":
       if event.is_group:
-        chats = spammers.find({})
         for c in chats:
           if event.chat_id == c["id"]:
             spammers.delete_one({"id": event.chat_id})
-            await event.reply("AbuseRefiner filter turned off for this chat.")
-            return
+            return await event.reply("AbuseRefiner filter turned off for this chat.")
         await event.reply("AbuseRefiner filter isn't turned on for this chat.")
-        if not input == "on" and not input == "off":
-            await event.reply("I only understand by on or off")
-            return
+  else:
+        await event.reply("I only understand by on or off")
         
 
 @spam.on(events.NewMessage(pattern=None))
