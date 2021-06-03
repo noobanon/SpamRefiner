@@ -7,7 +7,17 @@ from telethon import events
 from better_profanity import profanity
 from SpamRefiner.events import register
 from SpamRefiner import spam
+from telethon import functions, types
 from telethon.tl import types
+from telethon.tl.functions.users import GetFullUserRequest
+from telethon.utils import pack_bot_file_id
+from telethon.utils import get_input_location
+from telethon import (TelegramClient, events, functions)
+from telethon.tl.types import DocumentAttributeAudio
+
+from telethon.errors.rpcerrorlist import YouBlockedUserError
+from telethon.tl.functions.messages import ForwardMessagesRequest, SendMessageRequest
+
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.errors import (BadRequestError, ChatAdminRequiredError,
                              ImageProcessFailedError, PhotoCropSizeSmallError,
@@ -23,6 +33,7 @@ from telethon.tl.types import (PeerChannel, ChannelParticipantsAdmins,
                                MessageEntityMentionName, MessageMediaPhoto,
                                ChannelParticipantsBots, User, UserFull)
 from telethon.tl.types import ChannelParticipantsBanned, ChannelParticipantCreator, ChannelParticipantsKicked
+
 from pymongo import MongoClient
 from SpamRefiner import MONGO_DB_URI
 client = MongoClient()
@@ -31,7 +42,9 @@ db = client["spamkiller"]
 spammers = db.spammer
 
 CMD_STARTERS = "/"
-#================Module==========
+
+#========================================Module======================================================================================
+#def imports
 
 async def can_change_info(message):
     result = await spam(
@@ -65,6 +78,7 @@ async def is_register_admin(chat, user):
         )
     return None
 
+#import abuse file
 profanity.load_censor_words_from_file("./abuse_wordlist.txt")
 
 @register(pattern="^/refineabuse ?(.*)")
