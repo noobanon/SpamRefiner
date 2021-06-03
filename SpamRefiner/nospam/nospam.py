@@ -146,7 +146,7 @@ async def del_profanity(event):
             await dev.delete()
 
 
-__plugin_name__ = "SpamRefine"
+__plugin_name__ = "nospam"
 
 help_plus = """
 Here is help for **SpamRefine**
