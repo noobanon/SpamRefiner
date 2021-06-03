@@ -103,15 +103,13 @@ async def profanity(event):
     await event.reply(
         "Please provide some input yes or no.\n\nCurrent setting is : **off**"
         )
-      return
   elif input == "on":
       if event.is_group:
         for c in chats:
           if event.chat_id == c["id"]:
-            await event.reply(
+            return await event.reply(
               "AbuseRefiner filter is already activated for this chat."
               )
-            return
         spammers.insert_one({"id": event.chat_id})
         await event.reply("AbuseRefiner filter turned on for this chat.")
           
