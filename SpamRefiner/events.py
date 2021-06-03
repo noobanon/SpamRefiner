@@ -22,7 +22,7 @@ def register(**args):
 def chataction(**args):
     """ Registers chat actions. """
     def decorator(func):
-        client.add_event_handler(func, events.ChatAction(**args))
+        spam.add_event_handler(func, events.ChatAction(**args))
         return func
 
     return decorator
@@ -31,7 +31,7 @@ def chataction(**args):
 def userupdate(**args):
     """ Registers user updates. """
     def decorator(func):
-        client.add_event_handler(func, events.UserUpdate(**args))
+        spam.add_event_handler(func, events.UserUpdate(**args))
         return func
 
     return decorator
@@ -45,7 +45,7 @@ def inlinequery(**args):
         args['pattern'] = '(?i)' + pattern
 
     def decorator(func):
-        client.add_event_handler(func, events.InlineQuery(**args))
+        spam.add_event_handler(func, events.InlineQuery(**args))
         return func
 
     return decorator
@@ -54,7 +54,7 @@ def inlinequery(**args):
 def callbackquery(**args):
     """ Registers inline query. """
     def decorator(func):
-        client.add_event_handler(func, events.CallbackQuery(**args))
+        spam.add_event_handler(func, events.CallbackQuery(**args))
         return func
 
     return decorator
