@@ -8,6 +8,10 @@
            
 </p>
 
+# Support-Group
+> Join Official Support Group for any types of helps related SpamRefiner
+<a href="https://t.me/TheBotSupport"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
+<a href="https://t.me/TheBotSupports"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
 # SpamRefiner 2.0
 > A proactive Spam Filter and Blocker for group chats.
