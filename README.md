@@ -5,4 +5,4 @@
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen)](https://github.com/noobanon/SpamRefiner "SpamRefiner")
 
 # SpamRefiner 2.0
-> A proactive Spam Filter and Blockrr for group chats.
+> A proactive Spam Filter and Blocker for group chats.
