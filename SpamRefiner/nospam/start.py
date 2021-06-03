@@ -33,7 +33,7 @@ async def help(event):
   else:
     await event.reply(
       "Contact me in PM to get the help menu",
-      buttons=[[Button.url("Help ", "t.me/SpamKiller?start=help")]],
+      buttons=[[Button.url("Help ", "t.me/SpamRefineRobot?start=help")]],
       )
 
 __plugin_name__ = "start"
