@@ -117,30 +117,30 @@ async def profanity(event):
 
 @spam.on(events.NewMessage(pattern=None))
 async def del_profanity(event):
-    if event.is_private:
-        return
-    if MONGO_DB_URI is None:
-        return
-    msg = str(event.text)
-    sender = await event.get_sender()
-    let = sender.username
-    if event.is_group:
-        if (await is_register_admin(event.input_chat, event.message.sender_id)):
-            return
-        pass
-    chats = spammers.find({})
-    for c in chats:
-        if event.text:
-            if event.chat_id == c['id']:
-                if better_profanity.profanity.contains_profanity(msg):
-                    await event.delete()
-                    if sender.username is None:
-                        st = sender.first_name
-                        hh = sender.id
-                        final = f"[{st}](tg://user?id={hh}) **{msg}** is detected as a slang word and your message has been deleted"
-                    else:
-                        final = f'@{let} **{msg}** is detected as a slang word and your message has been deleted'
-                    dev = await event.respond(final)
-                    await asyncio.sleep(5)
-                    await dev.delete()
+  if event.is_private:
+    return
+  if MONGO_DB_URI is None:
+    return
+  msg = str(event.text)
+  sender = await event.get_sender()
+  let = sender.username
+  if event.is_group:
+    if (await is_register_admin(event.input_chat, event.message.sender_id)):
+      return
+    pass
+  chats = spammers.find({})
+  for c in chats:
+    if event.text:
+      if event.chat_id == c['id']:
+        if better_profanity.profanity.contains_profanity(msg):
+          await event.delete()
+          if sender.username is None:
+            st = sender.first_name
+            hh = sender.id
+            final = f"[{st}](tg://user?id={hh}) **{msg}** is detected as a slang word and your message has been deleted"
+          else:
+            final = f'@{let} **{msg}** is detected as a slang word and your message has been deleted'
+            dev = await event.respond(final)
+            await asyncio.sleep(5)
+            await dev.delete()
 
