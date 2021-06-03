@@ -47,4 +47,4 @@ if ENV:
 api_id = API_KEY
 api_hash = API_HASH
 spam = TelegramClient("SpamRefiner", api_id, api_hash)
-    
+spam.start()    
