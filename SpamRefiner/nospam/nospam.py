@@ -79,7 +79,7 @@ async def is_register_admin(chat, user):
 
 #import abuse file
 
-
+profanity.load_censor_words_from_file('./abuse_wordlist.txt')
 @register(pattern="^/refineabuse(?: |$)(.*)")
 async def profanity(event):
   if event.fwd_from:
@@ -129,7 +129,7 @@ async def profanity(event):
             await event.reply("I only understand by on or off")
             return
         
-profanity.load_censor_words_from_file("./abuse_wordlist.txt")
+
 @spam.on(events.NewMessage(pattern=None))
 async def del_profanity(event):
   if event.is_private:
