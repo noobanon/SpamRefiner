@@ -49,9 +49,9 @@ MONGO_CLIENT = motor_asyncio.AsyncIOMotorClient(MONGO_DB_URL)
 db = MONGO_CLIENT.spamrefiner
 #start bot
 print("INITIALIZING ....")
-pbot = Client("spamrefiner", bot_token=TOKEN, api_id, api_hash)
 api_id = API_KEY
 api_hash = API_HASH
+pbot = Client("spamrefiner", bot_token=TOKEN, api_id, api_hash)
 spam = TelegramClient("SpamRefiner", api_id, api_hash)
 spam.start(bot_token=TOKEN)    
 pbot.start()
