@@ -3,6 +3,7 @@ from time import sleep
 from asyncio import sleep, wait
 import asyncio
 import better_profanity
+from telethon import events
 from better_profanity import profanity
 from SpamRefiner.events import register
 from SpamRefiner import spam
