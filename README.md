@@ -6,3 +6,5 @@
 
 # SpamRefiner 2.0
 > A proactive Spam Filter and Blocker for group chats.
+
+![SpamRefiner](https://github.com/noobanon/SpamRefiner/blob/main/SpamRefiner/nospam/helpers/SpamRefiner.gif)
