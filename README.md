@@ -9,7 +9,7 @@
 </p>
 
 # Support-Group
-> Join Official Support Group for any types of helps related SpamRefiner <br>
+> Join official support group for any types of helps related SpamRefiner <br>
 <a href="https://t.me/TheBotSupport"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 <a href="https://t.me/TheBotSupports"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
