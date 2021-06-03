@@ -38,7 +38,7 @@ from pymongo import MongoClient
 from SpamRefiner import MONGO_DB_URI
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["spamkiller"]
+db = client["spamrefiner"]
 spammers = db.spammer
 
 CMD_STARTERS = "/"
