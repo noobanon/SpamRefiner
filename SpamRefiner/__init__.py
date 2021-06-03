@@ -11,7 +11,7 @@ from logging import DEBUG
 from logging import getLogger
 from logging import INFO
 from telethon import TelegramClient, events, sync
-
+from pyrogram import Client
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
@@ -46,9 +46,12 @@ if ENV:
     LOGS = getLogger(__name__)
 
 MONGO_CLIENT = motor_asyncio.AsyncIOMotorClient(MONGO_DB_URL)
-
-            
+db = MONGO_CLIENT.spamrefiner
+#start bot
+print("INITIALIZING ....")
+pbot = Client("spamrefiner", bot_token=TOKEN, api_id, api_hash)
 api_id = API_KEY
 api_hash = API_HASH
 spam = TelegramClient("SpamRefiner", api_id, api_hash)
 spam.start(bot_token=TOKEN)    
+pbot.start()
