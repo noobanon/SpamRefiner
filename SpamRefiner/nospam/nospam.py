@@ -87,7 +87,7 @@ async def profanity(event):
     return
   if event.is_private:
     return
-  if MONGO_DB_URI is None:
+  if MONGO_DB_URL is None:
     return
   if not await can_change_info(message=event):
     await event.reply("**You Don't have permission to use this**")
@@ -135,7 +135,7 @@ async def profanity(event):
 async def del_profanity(event):
   if event.is_private:
     return
-  if MONGO_DB_URI is None:
+  if MONGO_DB_URL is None:
     return
   msg = str(event.text)
   sender = await event.get_sender()
