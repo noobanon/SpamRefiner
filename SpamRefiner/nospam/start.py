@@ -3,7 +3,7 @@ from telethon import custom, events, Button
 from telethon import types
 from telethon.tl import functions
 from SpamRefiner.events import register
-
+from datetime import datetime
 
 PM_START_TEXT = """Hi I'm a SpamRefiner Bot Built in Python Using Telethon For More Use /help"""
 
@@ -36,6 +36,16 @@ async def help(event):
       buttons=[[Button.url("Help ", "t.me/SpamRefineRobot?start=help")]],
       )
 
+@register(pattern="^/ping$")
+async def _(event):
+    if event.fwd_from:
+        return
+    start = datetime.now()
+    pong = await event.reply("Pong!")
+    end = datetime.now()
+    ms = (end - start).microseconds / 1000
+    await pong.edit("Pong!\n{}".format(ms))
+   
 __plugin_name__ = "start"
 
 help_plus = """
