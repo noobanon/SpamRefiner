@@ -3,6 +3,7 @@ from SpamRefiner import spam
 from SpamRefiner import TOKEN, LOGGER
 import importlib
 import SpamRefiner.events
+from SpamRefiner.nospam import to_load
 
 HELP = {}
 IMPORTED = {}
