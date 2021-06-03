@@ -35,7 +35,7 @@ async def help(event):
       buttons=[[Button.url("Help ", "t.me/SpamKiller?start=help")]],
       )
 
-__plugin_name__ = "_main"
+__plugin_name__ = "start"
 
 help_plus = """
 This Is Help Menu Of *SpamRefiner*
