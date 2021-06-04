@@ -6,7 +6,7 @@ import better_profanity
 from better_profanity import profanity
 from SpamRefiner.events import register
 from SpamRefiner import spam
-from.SpamRefiner.nospam.helpers.admin_rights import user_is_ban_protected
+from SpamRefiner.nospam.helpers.admin_rights import user_is_ban_protected
 from telethon import functions, types, events
 from telethon.tl import types
 from telethon.tl.functions.users import GetFullUserRequest
