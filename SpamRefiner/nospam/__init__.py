@@ -1,1 +1,1 @@
-to_load = ["start", "nospam"]
+to_load = ["start", "nospam", "nosell"]
