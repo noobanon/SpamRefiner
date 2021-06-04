@@ -5,7 +5,7 @@
     <a href="https://github.com/noonanon/SpamRefiner/issues"> <img src="https://img.shields.io/github/issues/noobanon/SpamRefiner?color=yellow&style=for-the-badge" /></a>
     <a href="https://github.com/noobanon/SpamRefiner/network/members"> <img src="https://img.shields.io/github/forks/noobanon/Spamrefiner?color=green&style=for-the-badge" /></a>  
     <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=yellow&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
-           
+     <a href="https://github.com/noobanon/SpamRefiner/graphs/contributors?from=2021-05-23&to=2021-06-04&type=c"> <img src="https://img.shields.io/github/contributors/noobanon/SpamRefiner?style=for-the-badge" /></a>        
 </p>
 
 # Support-Group
