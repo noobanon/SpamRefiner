@@ -4,5 +4,4 @@ selling
 70rs
 Buying
 Selling-Netflix
-Selling- Prime
-
+Selling-Prime
