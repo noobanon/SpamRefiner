@@ -84,7 +84,7 @@ async def is_register_admin(chat, user):
 
 #=========================RefineSellings======================
 
-custom_badwords = ['sell', 'selling', 'buy']
+custom_badwords = ['sell', 'selling', 'buy', 'selling-prime', '100rs', '150rs', 'Cheap', 'Fixed-Rate']
 
 @register(pattern="^/refineselling(?: |$)(.*)")
 async def nosell(sell):
@@ -155,7 +155,7 @@ async def del_sell(sell):
             final = f"[{st}](tg://user?id={hh}) **{msg}** is detected as a selling word and your message has been deleted"
           else:
             final = f'@{let} **{msg}** is Detected as a selling word and your message has been deleted'
-            dev = await event.respond(final)
+            dev = await sell.respond(final)
             await asyncio.sleep(3)
             await dev.delete()
 
