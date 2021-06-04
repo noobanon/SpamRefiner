@@ -4,8 +4,8 @@ from asyncio import sleep, wait
 import asyncio
 import better_profanity
 from better_profanity import profanity
-from SpamRefiner.events import register
-from SpamRefiner import spam
+from SpamRefiner.events import register, get_user_from_event, get_user_from_id
+from SpamRefiner import spam, SUDO_USERS
 from SpamRefiner.nospam.helpers.admin_rights import user_is_ban_protected
 from telethon import functions, types, events
 from telethon.tl import types
@@ -140,11 +140,12 @@ async def del_sell(sell):
   msg = str(sell.text)
   sender = await sell.get_sender()
   let = sender.username
+  user = await get_user_from_event(sell)
   if sell.is_group:
     if (await is_register_admin(sell.input_chat, sell.message.sender_id)):
       return
-    if (await user_is_ban_protected(sell.input_chat, sell.message.sender_id)):
-      return
+    if int(user.id) in SUDO_USERS:
+        return
     pass
   chats = sellers.find({})
   for c in chats:
@@ -161,6 +162,7 @@ async def del_sell(sell):
             dev = await sell.respond(final)
             await asyncio.sleep(3)
             await dev.delete()
+
 
 __plugin_name__ = "nosell"
 
