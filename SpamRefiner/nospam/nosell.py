@@ -85,7 +85,6 @@ async def is_register_admin(chat, user):
 #=========================RefineSellings======================
 
 custom_badwords = ['sell', 'selling', 'buy']
-profanity.load_censor_words(custom_badwords)
 
 @register(pattern="^/refineselling(?: |$)(.*)")
 async def nosell(sell):
