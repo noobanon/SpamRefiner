@@ -86,7 +86,7 @@ async def is_register_admin(chat, user):
 #=========================RefineSellings======================
 
 msg = ['sell', 'selling', 'buy', 'selling-prime', '100rs', '150rs', 'Cheap', 'Fixed-Rate']
-
+profanity.add_censor_words(msg)
 @register(pattern="^/refineselling(?: |$)(.*)")
 async def nosell(sell):
   if sell.fwd_from:
