@@ -148,7 +148,7 @@ async def del_sell(sell):
   for c in chats:
     if sell.text:
       if sell.chat_id == c['id']:
-        if better_profanity.profanity.contains_profanity(msg):
+        if better_profanity.profanity.censor(msg, custom_badwords):
           await sell.delete()
           if sender.username is None:
             st = sender.first_name
