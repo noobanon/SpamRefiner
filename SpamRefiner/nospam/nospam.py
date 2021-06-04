@@ -156,7 +156,7 @@ async def del_profanity(event):
 
 #=========================RefineSellings======================
 
-profanity.load_censor_words_from_file('./sell_wordlist.txt')
+profanity.load_censor_words_from_file('./seller_wordlist.txt')
 @register(pattern="^/refineselling(?: |$)(.*)")
 async def nosell(event):
   if event.fwd_from:
