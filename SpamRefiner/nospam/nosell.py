@@ -37,7 +37,7 @@ from pymongo import MongoClient
 from SpamRefiner import MONGO_DB_URL
 client = MongoClient()
 client = MongoClient(MONGO_DB_URL)
-db = client["spamrefiner"]
+db = client["SpamRefiner"]
 sellers = db.seller
 
 
@@ -84,7 +84,7 @@ async def is_register_admin(chat, user):
 
 #=========================RefineSellings======================
 
-profanity.load_censor_words_from_file('./seller_wordlist.txt')
+profanity.load_censor_words_from_file("./seller_wordlist.txt")
 @register(pattern="^/refineselling(?: |$)(.*)")
 async def nosell(event):
   if event.fwd_from:
@@ -151,7 +151,7 @@ async def del_sell(event):
           if sender.username is None:
             st = sender.first_name
             hh = sender.id
-            final = f"[{st}](tg://user?id={hh}) **{msg}** is detected as a slang word and your message has been deleted"
+            final = f"[{st}](tg://user?id={hh}) **{msg}** is detected as a selling word and your message has been deleted"
           else:
             final = f'@{let} **{msg}** is Detected as a selling word and your message has been deleted'
             dev = await event.respond(final)
