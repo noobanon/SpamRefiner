@@ -139,8 +139,7 @@ async def del_sell(sell):
     return
   msg = str(sell.text)
   sender = await sell.get_sender()
-  let = sender.username
-  
+  let = sender.username  
   if sell.is_group:
     if (await is_register_admin(sell.input_chat, sell.message.sender_id)):
       return
