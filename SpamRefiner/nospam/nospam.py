@@ -150,9 +150,9 @@ async def del_profanity(event):
           if sender.username is None:
             st = sender.first_name
             hh = sender.id
-            final = f"[{st}](tg://user?id={hh}) **{msg}** is detected as a slang word and your message has been deleted"
+            final = f"[{st}](tg://user?id={hh}) **{msgd}** is detected as a slang word and your message has been deleted"
           else:
-            final = f'@{let} **{msg}** is detected as a slang word and your message has been deleted'
+            final = f'@{let} **{msgd}** is detected as a slang word and your message has been deleted'
             dev = await event.respond(final)
             await asyncio.sleep(5)
             await dev.delete()
@@ -226,9 +226,9 @@ async def del_sell(event):
           if sender.username is None:
             st = sender.first_name
             hh = sender.id
-            final = f"[{st}](tg://user?id={hh}) **{msg}** is detected as a slang word and your message has been deleted"
+            final = f"[{st}](tg://user?id={hh}) **{msgs}** is detected as a slang word and your message has been deleted"
           else:
-            final = f'@{let} **{msg}** is Detected as a selling word and your message has been deleted'
+            final = f'@{let} **{msgs}** is Detected as a selling word and your message has been deleted'
             dev = await event.respond(final)
             await asyncio.sleep(3)
             await dev.delete()
