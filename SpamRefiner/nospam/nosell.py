@@ -150,21 +150,12 @@ async def del_sell(sell):
       if sell.chat_id == c['id']:
         if better_profanity.profanity.contains_profanity(msg):
           await sell.delete()
-          if sender.username is None:
-            st = sender.first_name
-            hh = sender.id
-            final = f"[{st}](tg://user?id={hh}) **{msg}** is detected as a selling word and your message has been deleted"
-          else:
-            final = f'@{let} **{msg}** is Detected as a selling word and your message has been deleted'
-            dev = await sell.respond(final)
-            await asyncio.sleep(3)
-            await dev.delete()
-
+          
 
 __plugin_name__ = "nosell"
 
 help_plus = """
 Here is help for **SpamRefine**
 SpamRefine Make Your Group Spam Free:
-**Example:** `/refineselling on`
+**Example:** `/refineselling on` Not Recommend With /refineabuse Coz Of Unstable
 """
