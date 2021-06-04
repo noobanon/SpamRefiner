@@ -41,6 +41,9 @@ db = client["spamrefiner"]
 spammers = db.spammer
 sellers = db.seller
 
+
+profanity.load_censor_words_from_file('./abuse_wordlist.txt')
+profanity.load_censor_words_from_file('./seller_wordlist.txt')
 CMD_STARTERS = "/"
 
 #========================================Module======================================================================================
@@ -80,7 +83,7 @@ async def is_register_admin(chat, user):
 
 #import abuse file
 
-profanity.load_censor_words_from_file('./abuse_wordlist.txt')
+
 @register(pattern="^/refineabuse(?: |$)(.*)")
 async def profanity(event):
   if event.fwd_from:
@@ -131,7 +134,7 @@ async def del_profanity(event):
     return
   if MONGO_DB_URL is None:
     return
-  msg = str(event.text)
+  msgd = str(event.text)
   sender = await event.get_sender()
   let = sender.username
   if event.is_group:
@@ -142,7 +145,7 @@ async def del_profanity(event):
   for c in chats:
     if event.text:
       if event.chat_id == c['id']:
-        if better_profanity.profanity.contains_profanity(msg):
+        if better_profanity.profanity.contains_profanity(msgd):
           await event.delete()
           if sender.username is None:
             st = sender.first_name
@@ -200,14 +203,14 @@ async def nosell(event):
   else:
         await event.reply("I only understand by on or off")
         
-profanity.load_censor_words_from_file('./seller_wordlist.txt')
+
 @spam.on(events.NewMessage(pattern=None))
 async def del_sell(event):
   if event.is_private:
     return
   if MONGO_DB_URL is None:
     return
-  msg = str(event.text)
+  msgs = str(event.text)
   sender = await event.get_sender()
   let = sender.username
   if event.is_group:
@@ -218,7 +221,7 @@ async def del_sell(event):
   for c in chats:
     if event.text:
       if event.chat_id == c['id']:
-        if better_profanity.profanity.contains_profanity(msg):
+        if better_profanity.profanity.contains_profanity(msgs):
           await event.delete()
           if sender.username is None:
             st = sender.first_name
