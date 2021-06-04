@@ -1,3 +1,9 @@
+<p align="center";
+
+<a href="https://github.com/noobanon/SpamRefiner"> <img src="https://img.shields.io/badge/Accepting-Contribution-red?style=for-the-badge&logo=appveyor" /></a>        
+
+</p>
+
 <p align="center">
     <a href="https://app.codacy.com/manual/noonanon/SpamRefiner/dashboard"> <img src="https://img.shields.io/codacy/grade/4d58f2a402b54aed8a7d95f7add45a81?color=brightgreen&logo=codacy&logoColor=green&style=for-the-badge" alt="Codacy" /></a>
     <a href="https://github.com/noobanon/SpamRefiner"> <img src="https://img.shields.io/github/languages/code-size/noobanon/SpamRefiner?color=purple&style=for-the-badge" /></a>
