@@ -15,11 +15,13 @@
 </p>
 
 <h2 align="center";>SUPPORT GROUP | CHANNEL</h2>
+
 > Join official support group for any types of helps related SpamRefiner <br>
 <a href="https://t.me/TheBotSupport"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 <a href="https://t.me/TheBotSupports"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
 <h2 align="center";>SPAMREFINER 2.0</h2>
+
 > A proactive Spam Filter and Blocker for group chats
 
  ![SpamRefiner](https://github.com/noobanon/SpamRefiner/blob/main/SpamRefiner/nospam/helpers/SpamRefiner.gif)
