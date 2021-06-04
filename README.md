@@ -14,18 +14,18 @@
      <a href="https://github.com/noobanon/SpamRefiner/graphs/contributors?from=2021-05-23&to=2021-06-04&type=c"> <img src="https://img.shields.io/github/contributors/noobanon/SpamRefiner?style=for-the-badge" /></a>        
 </p>
 
-# Support-Group
+<h2 align="center";>SUPPORT GROUP | CHANNEL</h2>
 > Join official support group for any types of helps related SpamRefiner <br>
 <a href="https://t.me/TheBotSupport"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 <a href="https://t.me/TheBotSupports"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
-# SpamRefiner 2.0
+<h2 align="center";>SPAMREFINER 2.0</h2>
 > A proactive Spam Filter and Blocker for group chats
 
  ![SpamRefiner](https://github.com/noobanon/SpamRefiner/blob/main/SpamRefiner/nospam/helpers/SpamRefiner.gif)
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-# Deploy Manual
+<h2 align="center";>DEPLOY MANUAL</h2>
 
 ```
 
