@@ -140,11 +140,11 @@ async def del_sell(sell):
   msg = str(sell.text)
   sender = await sell.get_sender()
   let = sender.username
-  user = await get_user_from_event(sell)
+  user_id = await get_user_from_event(sell)
   if sell.is_group:
     if (await is_register_admin(sell.input_chat, sell.message.sender_id)):
       return
-    if int(user.id) in SUDO_USERS:
+    if user_id in SUDO_USERS:
         return
     pass
   chats = sellers.find({})
