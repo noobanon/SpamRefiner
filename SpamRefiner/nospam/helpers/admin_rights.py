@@ -1,5 +1,5 @@
 from SpamRefiner import SUDO_USERS
-from SpamRefiner import spam as a client
+from SpamRefiner import spam as client
 from telethon.tl.types import ChannelParticipantsAdmins
 
 
