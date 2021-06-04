@@ -85,7 +85,7 @@ async def is_register_admin(chat, user):
 
 #=========================RefineSellings======================
 
-custom_badwords = ['sell', 'selling', 'buy', 'selling-prime', '100rs', '150rs', 'Cheap', 'Fixed-Rate']
+msg = ['sell', 'selling', 'buy', 'selling-prime', '100rs', '150rs', 'Cheap', 'Fixed-Rate']
 
 @register(pattern="^/refineselling(?: |$)(.*)")
 async def nosell(sell):
@@ -148,7 +148,7 @@ async def del_sell(sell):
   for c in chats:
     if sell.text:
       if sell.chat_id == c['id']:
-        if better_profanity.profanity.censor(msg):
+        if better_profanity.profanity.contains_profanity(msg):
           await sell.delete()
           if sender.username is None:
             st = sender.first_name
