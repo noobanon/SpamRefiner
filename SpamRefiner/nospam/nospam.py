@@ -39,6 +39,7 @@ client = MongoClient()
 client = MongoClient(MONGO_DB_URL)
 db = client["spamrefiner"]
 spammers = db.spammer
+sellers = db.seller
 
 CMD_STARTERS = "/"
 
@@ -138,6 +139,82 @@ async def del_profanity(event):
       return
     pass
   chats = spammers.find({})
+  for c in chats:
+    if event.text:
+      if event.chat_id == c['id']:
+        if better_profanity.profanity.contains_profanity(msg):
+          await event.delete()
+          if sender.username is None:
+            st = sender.first_name
+            hh = sender.id
+            final = f"[{st}](tg://user?id={hh}) **{msg}** is detected as a slang word and your message has been deleted"
+          else:
+            final = f'@{let} **{msg}** is detected as a slang word and your message has been deleted'
+            dev = await event.respond(final)
+            await asyncio.sleep(5)
+            await dev.delete()
+
+#=========================RefineSellings======================
+
+profanity.load_censor_words_from_file('./sell_wordlist.txt')
+@register(pattern="^/refineselling(?: |$)(.*)")
+async def nosell(event):
+  if event.fwd_from:
+    return
+  if event.is_private:
+    return
+  if MONGO_DB_URL is None:
+    return
+  if not await can_change_info(message=event):
+    await event.reply("**You Don't have permission to use this**")
+    return 
+  input = event.pattern_match.group(1)
+  chats = sellers.find({})
+  if not input:
+    for c in chats:
+      if event.chat_id == c["id"]:
+        await event.reply(
+          "Please provide some input yes or no.\n\nCurrent setting is : **on**"
+          )
+        return
+    await event.reply(
+        "Please provide some input yes or no.\n\nCurrent setting is : **off**"
+        )
+  elif input == "on":
+      if event.is_group:
+        for c in chats:
+          if event.chat_id == c["id"]:
+            return await event.reply(
+              "SellingRefiner filter is already activated for this chat."
+              )
+        sellers.insert_one({"id": event.chat_id})
+        await event.reply("SellingRefiner filter turned on for this chat.")
+          
+  elif input == "off":
+      if event.is_group:
+        for c in chats:
+          if event.chat_id == c["id"]:
+            sellers.delete_one({"id": event.chat_id})
+            return await event.reply("SellingRefiner filter turned off for this chat.")
+        await event.reply("SellingRefiner filter isn't turned on for this chat.")
+  else:
+        await event.reply("I only understand by on or off")
+        
+
+@spam.on(events.NewMessage(pattern=None))
+async def del_sell(event):
+  if event.is_private:
+    return
+  if MONGO_DB_URL is None:
+    return
+  msg = str(event.text)
+  sender = await event.get_sender()
+  let = sender.username
+  if event.is_group:
+    if (await is_register_admin(event.input_chat, event.message.sender_id)):
+      return
+    pass
+  chats = sellers.find({})
   for c in chats:
     if event.text:
       if event.chat_id == c['id']:
