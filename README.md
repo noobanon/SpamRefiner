@@ -22,7 +22,6 @@
 # Deploy Manual
 
 ```
-ALLOW_EXCL : True
 
 API_HASH : YOUR API HASH
 
@@ -35,3 +34,16 @@ MONGO_DB_URL : MONGO DB URL
 SUDO_USERS : YOUR SUDO USERS ID
 
 ```
+
+<h2 align="center";>OWNER | DEVS</h2>
+
+
+<p align="center";
+
+<a href="https://t.me/FakeMasked"> <img src="https://img.shields.io/badge/Owner-noobanon-red?style=for-the-badge&logo=telegram" /></a>        
+<p align="center";
+<a href="https://t.me/annihilatorrrr"> <img src="https://img.shields.io/badge/Dev-annihilatorrrr-Green?style=plastic&logo=telegram" /></a>
+<p align="center";
+<a href="https://t.me/RoseLoverY"> <img src="https://img.shields.io/badge/Dev-RoseLoverY-yellow?style=plastic&logo=telegram" /></a>
+
+</p>
