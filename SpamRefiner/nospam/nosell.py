@@ -83,10 +83,7 @@ async def is_register_admin(chat, user):
 
 async def get_user_from_event(event):
     """ Get the user from argument or replied message. """
-    try:
-        args = (event.message.text).split(" ", 1)[1]
-    except:
-        args = None
+    args = (event.message.text).split(" ", 1)[1]
     extra = None
     if event.reply_to_msg_id and not len(args) == 2:
         previous_message = await event.get_reply_message()
@@ -119,9 +116,6 @@ async def get_user_from_event(event):
     return user_obj, extra
 
 
-
-
-
 async def get_user_from_id(user, event):
     if isinstance(user, str):
         user = int(user)
@@ -132,6 +126,7 @@ async def get_user_from_id(user, event):
         return await event.reply(str(err))
 
     return user_obj
+
 
 #=========================RefineSellings======================
 
