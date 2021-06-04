@@ -37,7 +37,7 @@ from pymongo import MongoClient
 from SpamRefiner import MONGO_DB_URL
 client = MongoClient()
 client = MongoClient(MONGO_DB_URL)
-db = client["SpamRefiner"]
+db = client["spamrefiner"]
 sellers = db.seller
 
 
