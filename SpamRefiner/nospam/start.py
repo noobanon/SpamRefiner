@@ -24,10 +24,11 @@ async def start(event):
   else:
     await event.reply("Hey I'm Alive")
 
-HELP_TEXT = """Hi I'm Spam Refiner Bot Built in Python:\n
-*SpamRefiner*:\n
+HELP_TEXT = """Hi I'm Spam Refiner Bot Built in Python Using Telethon:\n
+**SpamRefiner**:\n
 Example: `/refineabuse` Get Current Chat Status
-`/refineabuse on` Turn on abuse protection """
+`/refineabuse on` Turn on abuse protection
+`/refineselling on|off` Turn on Selling Protection """
 
 @register(pattern="^/help")
 async def help(event):
