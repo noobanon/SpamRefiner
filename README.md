@@ -19,3 +19,19 @@
  ![SpamRefiner](https://github.com/noobanon/SpamRefiner/blob/main/SpamRefiner/nospam/helpers/SpamRefiner.gif)
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
+# Deploy Manual
+
+```
+ALLOW_EXCL : True
+
+API_HASH : YOUR API HASH
+
+API_KEY : YOUR API KEY
+
+TOKEN : YOUR BOT TOKEN
+
+MONGO_DB_URL : MONGO DB URL
+
+SUDO_USERS : YOUR SUDO USERS ID
+
+```
